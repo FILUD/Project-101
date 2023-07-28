@@ -1,0 +1,16 @@
+.tap-bar {
+  color: black;
+
+}
+
+label {
+  color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+.text-tap {
+  font-size: large;
+  color: black;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
