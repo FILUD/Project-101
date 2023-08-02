@@ -1,0 +1,88 @@
+/* Common styles for all screen sizes */
+.body-welcome {
+    margin: auto;
+  }
+
+  .header {
+    background-color: rgba(158, 55, 255, 0.308);
+  }
+
+  .text-btn-start {
+    color: white;
+    border: none;
+  }
+  
+  .img-welcome {
+    position: absolute;
+    bottom: 130px;
+    right: 130px;
+    transform: scale(1.5);
+  }
+  
+  .container-welcome {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 10;
+    color: white; /* corrected 'stroke' to 'color' */
+  }
+  
+  .text-welcome {
+    font-size: 70px;
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  }
+  
+  
+  .button-start {
+    width: 100%;
+    height: 60px;
+    background-color: #2B92D4;
+    font-size: 30px;
+    color: white;
+    border: white solid 2px;
+  }
+
+  .button-start:hover {
+
+    background-color: #3ab4ff;
+
+  }
+
+ /* Media Query for phones (up to 480px) */
+@media only screen and (max-width: 480px) {
+    .container-welcome {
+      top: 20%; 
+    }
+  
+    .text-welcome {
+      font-size: 30px; 
+    }
+  
+    .button-start {
+      font-size: 18px; 
+    }
+  
+    .img-welcome {
+      bottom: -50px;
+      right: -50px;
+      transform: scale(0.6); 
+    }
+    .button-start {
+      width: 100%;
+      height: 30px;
+      background-color: #2B92D4;
+      font-size: 15px;
+      color: white;
+      border: white solid 2px;
+    }
+  
+  }
+  
+
+
+  
+
+
+
+  

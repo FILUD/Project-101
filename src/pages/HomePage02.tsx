@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import './HomePage.css';
-
 
 type Character = {
   id: string;
@@ -10,15 +9,14 @@ type Character = {
   weapon: string;
 };
 
-const HomePage: React.FC = () => {
+const HomePage2: React.FC = () => {
   const [characterData, setCharacterData] = useState<Character[]>([]);
   const [selectedCharacters, setSelectedCharacters] = useState<string[]>([]);
+  const location = useLocation();
   const navigate = useNavigate();
 
-  //++++++++++++++++++++++++++++++++++ fetch random item ++++++++++++++++++++++++++++++++++++++++
-
+  // Fetch character data from the API and shuffle it
   useEffect(() => {
-    // Fetch character data from the API
     fetch('https://characterapi.ticwoc.repl.co/characters')
       .then((response) => response.json())
       .then((data) => {
@@ -35,13 +33,13 @@ const HomePage: React.FC = () => {
     return array;
   };
 
-  // Function to handle character selectiona
+  // Function to handle character selection
   const handleCharacterSelection = (characterId: string) => {
     setSelectedCharacters((prevSelected) => {
       if (prevSelected.includes(characterId)) {
         return prevSelected.filter((id) => id !== characterId);
       } else {
-        if (prevSelected.length < 10) {
+        if (prevSelected.length < 5) {
           return [...prevSelected, characterId];
         } else {
           return prevSelected;
@@ -51,11 +49,11 @@ const HomePage: React.FC = () => {
   };
 
   const handleNavigation = () => {
-    if (selectedCharacters.length < 10) {
-      swal("Warning", "Please select 10 characters before proceeding.", "warning");
+    if (selectedCharacters.length < 5) {
+      swal("Warning", "Please select 5 choices before proceeding.", "warning");
     } else {
       const queryParams = selectedCharacters.map((characterId) => `character=${characterId}`).join('&');
-      navigate(`/home/2?${queryParams}`);
+      navigate(`/result?${queryParams}`);
     }
   };
 
@@ -113,4 +111,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default HomePage2;

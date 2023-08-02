@@ -1,16 +1,110 @@
-.tap-bar {
-  color: black;
-
+.contianer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.171);
 }
 
-label {
-  color: black;
+.none-bg {
+  background: none;
+  border: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 20px;
+  padding-left: 30px;
+  margin-top: 5px;
+  padding-bottom: 15px;
+}
 
-.text-tap {
-  font-size: large;
+.image-button-img {
+  height: 60px;
+  width: 50px;
+  
+}
+
+.image-bell {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  margin-top: 5px;
+  padding-bottom: 15px;
+}
+
+.image-bell-img {
+  height: 50px;
+  width: 50px;
+  margin-right: 50px;
+}
+
+.container-profile {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  margin-top: 5px;
+  padding-bottom: 16px;
+}
+
+.img-profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.text-email {
   color: black;
-  font-family: 'Mochiy Pop One', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .image-button-img {
+    height: 40px;
+    width: 30px;
+  }
+
+  .image-bell-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .img-profile {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-button-img {
+    height: 30px;
+    width: 25px;
+    margin-top: 4px;
+  }
+
+  .image-bell-img {
+    height: 30px;
+    margin-top: 4px;
+    width: 30px;
+    margin-right: 4px;
+  }
+
+  .img-profile {
+    height: 30px;
+    width: 30px;
+  }
+  .container-profile {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    margin-top: 5px;
+    padding-bottom: 16px;
+  }
 }

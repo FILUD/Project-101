@@ -4,9 +4,11 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ErrorPage from './pages/ErrorPage';
 import ProfilePage from './pages/ProfilePage';
 import LoginPage from './pages/LoginPage';
+import HomePage02 from './pages/HomePage02';
+import Welcome from './pages/Welcome';
+import ResultPage from './pages/ResultPage';
 
 import Navigation from './components/Navigation';
 import axios from 'axios';
@@ -88,6 +90,9 @@ function App() {
             {loggedIn ? (
               <>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/home/2" element={<HomePage02 />} />
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/result" element={<ResultPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/myprofile" element={<ProfilePage />} />
             <Route path="*" element={<Navigate to="/login" />} />

@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
-import './Page.css';
 import './ProfilePage.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -34,6 +33,8 @@ const ProfilePage = () => {
   const logOut = () => {
     setProfile(null);
     navigate('/login');
+    localStorage.removeItem('hasReloaded');
+    window.location.reload();
   };
 
   return (
@@ -66,7 +67,6 @@ const ProfilePage = () => {
 
             </div>
           ) : (
-
             <GoogleLogin
               clientId={clientId}
               buttonText="Sign in with Google"
