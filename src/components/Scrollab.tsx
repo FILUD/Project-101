@@ -7,7 +7,7 @@ import './Scrollab.css';
 const Scrollab: React.FC = () => {
   const [profile, setProfile] = useState<any>(null);
   const [value, setValue] = useState(0);
-  const clientId = '72831622081-thqra06krh8p7murespj7d3raettjdfk.apps.googleusercontent.com';
+  const clientId = '936930992538-6pkkdh1hf45lacko0scjo0oh2gtc3jam.apps.googleusercontent.com';
 
   useEffect(() => {
     const initClient = () => {
@@ -57,7 +57,7 @@ const Scrollab: React.FC = () => {
       ) : (
         <GoogleLogin
           clientId={clientId}
-          buttonText="Sign in with Google"
+          buttonText=""
           onSuccess={onSuccess}
           className='btn-google'
           cookiePolicy={'single_host_origin'}

@@ -8,16 +8,15 @@
 
 .img-pro {
     border-radius: 100%;
-    
-}
-.hr-01 {
-    color: #FBD85D;
+    width: 250px;
+    height: 250px;
+
 }
 
 .pro-container {
-    margin-top: 3%;
-    background-color: #FBD85D;
+    margin-top: 1%;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.089);
     padding: 3%;
     width: 20%;
     border: white solid 1px;
@@ -26,12 +25,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
     font-family: 'Exo', sans-serif;
 }
 
@@ -39,235 +38,73 @@ body{
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
-    
+    top: 50vh;
 }
-.context h1{
+
+.context h1 {
     text-align: center;
     color: #fff;
     font-size: 50px;
 }
 
-/*---------------------------------------------------- backgound ----------------------------------------------------------------------*/
-/*---------------------------------------------------- backgound ----------------------------------------------------------------------*/
-/*---------------------------------------------------- backgound ----------------------------------------------------------------------*/
-
-.area{
-    background: #FAE392;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:100%;
-    position: relative;
-   
+.profile-text {
+    text-align: left;
+    font-size: 25px;
 }
 
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-
+.text-face-profile {
+    margin-top: 5px;
+    color: #2B92D4;
+    margin-bottom: -35px;
+    text-align: left;
 }
 
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.5);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-
-    
+.text-header {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: -50px;
 }
 
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-
+.btn-google-logout {
+    width: 300px;
+    font-size: 30px;
 }
 
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-
-}
-
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-
-}
-
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
-
-}
-
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
-
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
-
-}
-
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
-
-}
-
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-
-}
-
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-
-}
-
-
-
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-        
+@media only screen and (max-width: 480px) {
+    .pro-container {
+        scale: 0.8;
+        width: 350px;
     }
 
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
+    .text-face-profile {
+        font-size: 20px;
+        margin-bottom: -30px;
     }
 
-}
+    .profile-text {
+        margin-top: 10px;
+        font-size: 20px;
+    }
 
-/*---------------------------------------------------- border box profile ----------------------------------------------------------------------*/
-/*---------------------------------------------------- border box profile ----------------------------------------------------------------------*/
-/*---------------------------------------------------- border box profile ----------------------------------------------------------------------*/
+    .img-pro {
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
 
+    }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 90deg;
-  inherits: true;
-}
+    .text-header {
+        font-size: 30px;
+        margin-top: 30px;
+    }
 
-@property --gradX {
-  syntax: '<percentage>';
-  initial-value: 50%;
-  inherits: true;
-}
+    .hr-line {
+        margin-bottom: -20px;
+    }
 
-@property --gradY {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: true;
-}
+    .btn-google-logout {
+        width: 300px;
+        font-size: 30px;
+    }
 
-
-p {
-	margin: 0;
-}
-
-:root {
-	--d: 2500ms;
-	--angle: 90deg;
-	--gradX: 100%;
-	--gradY: 50%;
-	--c1: rgba(168, 239, 255, 1);
-	--c2: rgba(168, 239, 255, 0.1);
-}
-
-.wrapper {
-	min-width: min(40rem, 100%);
-}
-
-.box {
-	margin: max(1rem, 3vw);
-	border: 0.35rem solid;
-	padding: 3vw;
-	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) linear infinite forwards;
-}
-
-.box:nth-child(2) {
-	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
-	animation: borderRadial var(--d) linear infinite forwards;
-}
-
-@keyframes borderRotate {
-	100% {
-		--angle: 420deg;
-	}
-}
-
-@keyframes borderRadial {
-	20% {
-		--gradX: 100%;
-		--gradY: 50%;
-	}
-	40% {
-		--gradX: 100%;
-		--gradY: 100%;
-	}
-	60% {
-		--gradX: 50%;
-		--gradY: 100%;
-	}
-	80% {
-		--gradX: 0%;
-		--gradY: 50%;
-	}
-	100% {
-		--gradX: 50%;
-		--gradY: 0%;
-	}
 }

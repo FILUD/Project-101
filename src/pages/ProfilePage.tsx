@@ -6,7 +6,7 @@ import './ProfilePage.css'
 import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
-  const clientId = '72831622081-thqra06krh8p7murespj7d3raettjdfk.apps.googleusercontent.com';
+  const clientId = '936930992538-6pkkdh1hf45lacko0scjo0oh2gtc3jam.apps.googleusercontent.com';
 
   const [profile, setProfile] = useState<any>(null);
   const navigate = useNavigate(); // Get the navigate function from the hook
@@ -44,7 +44,7 @@ const ProfilePage = () => {
       </header>
       <center>
         <div className='pro-container box'>
-          <h2>My Profile</h2>
+          <h2 className='text-header'>My Profile</h2>
           
           <br /> <br />
 
@@ -54,14 +54,15 @@ const ProfilePage = () => {
               <br />
               <br />
 
-              <p>Name : <strong>{profile.name}</strong></p>
-              <p>Email : <strong>{profile.email}</strong></p>
-              <br /><br /><br />
+              <p className='profile-text'><p className='text-face-profile'>Name</p> <br /> <strong>{profile.name}</strong></p>
+              <hr className='hr-line'/><br /><br />
+              <p className='profile-text'><p className='text-face-profile'>Email</p> <br /> <strong>{profile.email}</strong></p>
+              <hr className='hr-line' /><br /><br /><br />
               <br />
               <GoogleLogout
                 clientId={clientId}
-                buttonText="ㅤLog outㅤ"
-                className='btn-google'
+                buttonText="ㅤㅤㅤㅤㅤㅤLog outㅤ"
+                className='btn-google-logout'
                 onLogoutSuccess={logOut}
               />
 
@@ -77,20 +78,6 @@ const ProfilePage = () => {
               isSignedIn={true}
             />
           )}
-        </div>
-        <div>
-          <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
         </div>
       </center>
     </div>

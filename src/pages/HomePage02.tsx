@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import './HomePage.css';
+import Swal from 'sweetalert2'
 
 type Character = {
   id: string;
@@ -20,7 +21,6 @@ const HomePage2: React.FC = () => {
     fetch('https://characterapi.ticwoc.repl.co/characters')
       .then((response) => response.json())
       .then((data) => {
-        // Shuffle the character data before setting it in the state
         setCharacterData(shuffleArray(data));
       });
   }, []);
@@ -32,6 +32,26 @@ const HomePage2: React.FC = () => {
     }
     return array;
   };
+
+
+
+  //--------------------------- selecting alert when need change page -------------------------------------
+
+  const SelectedSuccess = () => {
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: 'Selected 5 item, Click next on below',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+
+  React.useEffect(() => {
+    if (selectedCharacters.length === 5) {
+      SelectedSuccess();
+    }
+  }, [selectedCharacters]);
 
   // Function to handle character selection
   const handleCharacterSelection = (characterId: string) => {
@@ -63,12 +83,7 @@ const HomePage2: React.FC = () => {
       <center>
         <br />
         <br />
-        <p className='text-01-home'>Select 10 descriptions that you consider <strong>most like you</strong></p>
-        {selectedCharacters.length === 10 && (
-          <div>
-
-          </div>
-        )}
+        <p className='text-01-home'>Select 5 descriptions that you consider <strong>least like you</strong></p>
         <br />
         <div className="item-grid">
           {characterData.map((character) => (
@@ -89,7 +104,7 @@ const HomePage2: React.FC = () => {
           ))}
           <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
           <div className="div-button-next">
-            <span className='text-next' onClick={handleNavigation}><strong>Next {'➤'}</strong></span>
+            <span className='text-next' onClick={handleNavigation}><strong>Result {'➤'}</strong></span>
           </div>
         </div>
         <br />

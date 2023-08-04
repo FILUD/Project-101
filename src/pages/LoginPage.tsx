@@ -10,7 +10,7 @@ interface LoginPageProps {
 }
 
 const LoginPage: React.FC<LoginPageProps> = ({ setLoggedIn }) => {
-  const clientId = '72831622081-thqra06krh8p7murespj7d3raettjdfk.apps.googleusercontent.com';
+  const clientId = '936930992538-6pkkdh1hf45lacko0scjo0oh2gtc3jam.apps.googleusercontent.com';
   const [profile, setProfile] = useState<any>(null);
   const navigate = useNavigate(); // Get the navigate function from the hook
 
